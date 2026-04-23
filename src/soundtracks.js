@@ -5,6 +5,7 @@
  * - id: unique identifier
  * - name: display name (shown on the button)
  * - file: path to the audio file in the public/audio folder
+ *         Use: import.meta.env.BASE_URL + 'audio/filename.mp3'
  * - restartPoint: time in seconds where the song should restart from when looping
  *                 (set to 0 to restart from the beginning)
  * - endPoint: (optional) time in seconds where the song should end and loop back
@@ -14,7 +15,7 @@
  * {
  *   id: 'attack-on-titan-intro',
  *   name: 'Attack on Titan - Guren no Yumiya',
- *   file: '/audio/aot-intro.mp3',
+ *   file: import.meta.env.BASE_URL + 'audio/aot-intro.mp3',
  *   restartPoint: 15,  // Restarts from 15 seconds into the song
  *   endPoint: 180      // Ends at 3 minutes (skips outro)
  * }
@@ -24,9 +25,9 @@ const soundtracks = [
   {
     id: 'excalibur',
     name: 'EXCALIBUR',
-    file: '/audio/SOUL EATER Excalibur Song.mp3',
+    file: import.meta.env.BASE_URL + 'audio/SOUL EATER Excalibur Song.mp3',
     restartPoint: 3,  // Restarts from 3 seconds into the song
-    endPoint: 45    // Plays until the end
+    endPoint: 45    // Plays until the 45 second mark
   },
 //   {
 //     id: 'sample-2',
